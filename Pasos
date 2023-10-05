@@ -1,0 +1,4 @@
+1. cd Minitalk/
+2. make
+3. ./server
+4. ./client PID mensaje

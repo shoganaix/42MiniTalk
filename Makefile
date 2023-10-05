@@ -3,34 +3,61 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+         #
+#    By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2023/09/04 19:07:38 by msoriano          #+#    #+#              #
-#    Updated: 2023/09/04 19:13:27 by msoriano         ###   ########.fr        #
+#    Created: 2022/12/05 10:49:40 by marcela           #+#    #+#              #
+#    Updated: 2022/12/12 18:31:03 by mrichard         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC = cc
-CCFLAGS = cc -Wall -Werror -Wextra
+CFLAGS = -Wall -Wextra -Werror
+NAME_CLIENT = client
+NAME_SERVER = server
+LIBFT = ./libft/libft.a
 
-SERVER = server
-CLIENT = client
+SRC_CLIENT = src/client.c
+OBJ_CLIENT = $(SRC_CLIENT:.c=.o)
 
-SRCS_SERVER = server.c
-SRCS_CLIENT = client.c
+SRC_SERVER = src/server.c
+OBJ_SERVER = $(SRC_SERVER:.c=.o)
 
-OBJS_SERVER = $(SRCS_SERVER:.c=.o)
-OBJS_CLIENT = $(SRCS_CLIENT:.c=.o)
+NAME_CLIENT_BONUS = client_bonus
+BONUS_SRC_CLIENT = bonus/client_bonus.c
+BONUS_OBJ_CLIENT = $(BONUS_SRC_CLIENT:.c=.o)
 
-all: $(SERVER) $(CLIENT)
-$(SERVER) $(CLIENT): $(OBJS_SERVER) $(OBJS_CLIENT) $(LIBFT)
-		${CCFLAGS} ${OBJS_SERVER} -o ${SERVER}
-		${CCFLAGS} ${OBJS_CLIENT} -o ${CLIENT}
+NAME_SERVER_BONUS = server_bonus
+BONUS_SRC_SERVER = bonus/server_bonus.c
+BONUS_OBJ_SERVER = $(BONUS_SRC_SERVER:.c=.o)
+
+all: $(NAME_CLIENT) $(NAME_SERVER)
+
+$(NAME_CLIENT): $(OBJ_CLIENT)
+	$(MAKE) --no-print-directory -C ./libft
+	$(CC) $(CFLAGS) $(OBJ_CLIENT) $(LIBFT) -o $(NAME_CLIENT)
+
+$(NAME_SERVER): $(OBJ_SERVER)
+	$(MAKE) --no-print-directory -C ./libft
+	$(CC) $(CFLAGS) $(OBJ_SERVER) $(LIBFT) -o $(NAME_SERVER)
+
+$(NAME_CLIENT_BONUS): $(BONUS_OBJ_CLIENT)
+	$(MAKE) --no-print-directory -C ./libft
+	$(CC) $(CFLAGS) $(BONUS_OBJ_CLIENT) $(LIBFT) -o $(NAME_CLIENT_BONUS)
+
+$(NAME_SERVER_BONUS): $(BONUS_OBJ_SERVER)
+	$(MAKE) --no-print-directory -C ./libft
+	$(CC) $(CFLAGS) $(BONUS_OBJ_SERVER) $(LIBFT) -o $(NAME_SERVER_BONUS)
+
+bonus: $(NAME_CLIENT_BONUS) $(NAME_SERVER_BONUS)
 
 clean:
-		$(MAKE) clean
-		rm -rf ${OBJS_SERVER} ${OBJS_CLIENT}
-fclean:	clean
-		$(MAKE) fclean
-		rm -rf $(SERVER) $(CLIENT)
-re:	fclean all
+	$(MAKE) clean -C ./libft
+	rm -rf $(OBJ_CLIENT) $(OBJ_SERVER)
+	rm -rf $(BONUS_OBJ_CLIENT) $(BONUS_OBJ_SERVER)
+
+fclean: clean
+	$(MAKE) fclean -C ./libft
+	rm -rf $(NAME_CLIENT) $(NAME_SERVER)
+	rm -rf $(NAME_CLIENT_BONUS) $(NAME_SERVER_BONUS)
+
+re: fclean all
