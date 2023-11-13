@@ -3,7 +3,9 @@
 **It serves as an introductory project to larger UNIX projects that will appear later in the course.**
 
 
-NO BONUSES
+<p align="center">
+<sub>NO BONUSES</sub>
+</p>
 <img width="194" alt="Captura" src="https://github.com/shoganaix/42PushSwap/assets/123943292/a706aec1-2095-45b3-b583-19fbcaf614c9">
 
 
