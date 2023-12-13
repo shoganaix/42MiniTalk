@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 00:16:40 by marcela           #+#    #+#             */
-/*   Updated: 2023/09/21 17:00:21 by msoriano         ###   ########.fr       */
+/*   Created: 2023/12/13 11:09:38 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:09:41 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h> */
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {

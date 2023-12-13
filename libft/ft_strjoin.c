@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 00:51:45 by marcela           #+#    #+#             */
-/*   Updated: 2023/09/21 16:59:42 by msoriano         ###   ########.fr       */
+/*   Created: 2023/12/13 11:08:43 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:08:47 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h> */
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

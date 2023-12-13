@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/09/25 01:12:31 by marcela           #+#    #+#             */
-/*   Updated: 2023/09/21 17:00:18 by msoriano         ###   ########.fr       */
+/*   Created: 2023/12/13 11:09:30 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:09:33 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/* #include <stdio.h> */
 
 static char	*ft_strncpy(char *dest, const char *src, size_t n)
 {

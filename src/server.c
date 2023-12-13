@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 10:43:57 by marcela           #+#    #+#             */
-/*   Updated: 2023/09/21 16:55:57 by msoriano         ###   ########.fr       */
+/*   Created: 2023/12/13 11:33:02 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:34:17 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	handle_sigusr(int signum, siginfo_t *info, void *ucontent)
 		ft_putchar_fd(c, STDOUT_FILENO);
 		c = 0;
 		if (kill(info->si_pid, SIGUSR1) == -1)
-			ft_printf("Server failed to send SIGUSR1");
+			ft_printf("Error. Server failed to send SIGUSR1");
 	}
 }
 
@@ -39,9 +39,9 @@ void	config_signals(void)
 	sa_newsig.sa_sigaction = &handle_sigusr;
 	sa_newsig.sa_flags = SA_SIGINFO;
 	if (sigaction(SIGUSR1, &sa_newsig, NULL) == -1)
-		ft_printf("Failed to change SIGUSR1's behavior");
+		ft_printf("Error. Failed to change SIGUSR1's behavior");
 	if (sigaction(SIGUSR2, &sa_newsig, NULL) == -1)
-		ft_printf("Failed to change SIGUSR2's behavior");
+		ft_printf("Error. Failed to change SIGUSR2's behavior");
 }
 
 int	main(void)

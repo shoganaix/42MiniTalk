@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_unsigned.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/03 22:09:41 by marcela           #+#    #+#             */
-/*   Updated: 2022/12/04 18:32:54 by mrichard         ###   ########.fr       */
+/*   Created: 2023/12/13 11:07:51 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:07:52 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/14 18:49:28 by marcela           #+#    #+#             */
-/*   Updated: 2022/12/10 23:49:20 by mrichard         ###   ########.fr       */
+/*   Created: 2023/12/13 11:10:15 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:10:17 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

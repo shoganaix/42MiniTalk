@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/05 10:43:59 by marcela           #+#    #+#             */
-/*   Updated: 2023/09/21 16:55:29 by msoriano         ###   ########.fr       */
+/*   Created: 2023/12/13 11:33:17 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:33:18 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,20 +19,20 @@ void	args_check(int argc, char **argv)
 	i = -1;
 	if (argc != 3)
 	{
-		ft_printf("Invalid number of params");
+		ft_printf("Error. Invalid number of parameters");
 		exit(EXIT_FAILURE);
 	}
 	while (argv[1][++i])
 	{
 		if (!ft_strchr("0123456789", argv[1][i]))
 		{
-			ft_printf("Incorrect PID!");
+			ft_printf("Error. Incorrect PID!");
 			exit(EXIT_FAILURE);
 		}
 	}
 	if (*argv[2] == 0)
 	{
-		ft_printf("Empty message");
+		ft_printf("Error. Empty message");
 		exit(EXIT_FAILURE);
 	}
 }
@@ -62,7 +62,7 @@ void	send_msg(int sv_pid, char *msg)
 void	sig_handler(int signum)
 {
 	if (signum == SIGUSR1)
-		ft_printf("Signal coming out!\n");
+		ft_printf("Signal coming out! 📟 \n");
 }
 
 void	config_signals(void)
@@ -72,9 +72,9 @@ void	config_signals(void)
 	new_sig.sa_handler = &sig_handler;
 	new_sig.sa_flags = SA_SIGINFO;
 	if (sigaction(SIGUSR1, &new_sig, NULL) == -1)
-		ft_printf("Failed to change SIGUSR1's behavior");
+		ft_printf("Error. Failed to change SIGUSR1's behavior");
 	if (sigaction(SIGUSR2, &new_sig, NULL) == -1)
-		ft_printf("Failed to change SIGUSR2's behavior");
+		ft_printf("Error. Failed to change SIGUSR2's behavior");
 }
 
 int	main(int argc, char **argv)

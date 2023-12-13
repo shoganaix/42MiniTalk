@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_strs.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mrichard <mrichard@student.42.fr>          +#+  +:+       +#+        */
+/*   By: msoriano <msoriano@student.42madrid.com>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/04 22:13:46 by mrichard          #+#    #+#             */
-/*   Updated: 2022/12/04 18:32:58 by mrichard         ###   ########.fr       */
+/*   Created: 2023/12/13 11:07:43 by msoriano          #+#    #+#             */
+/*   Updated: 2023/12/13 11:07:45 by msoriano         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
