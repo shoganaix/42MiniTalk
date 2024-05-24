@@ -39,3 +39,6 @@ clean:
 fclean: clean
 	$(MAKE) fclean -C ./libft
 	rm -rf $(NAME_CLIENT) $(NAME_SERVER)
+re: fclean all
+
+.PHONY: all clean fclean re
